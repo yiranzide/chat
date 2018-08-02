@@ -3,6 +3,9 @@ from flask import request
 import redis
 import time
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 
 '''
