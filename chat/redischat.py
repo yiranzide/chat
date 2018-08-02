@@ -6,6 +6,7 @@ import json
 import importlib
 import sys
 importlib.reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 '''
