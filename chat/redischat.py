@@ -3,9 +3,7 @@ from flask import request
 import redis
 import time
 import json
-import sys
-import imp
-imp.reload(sys)
+
 
 
 '''
@@ -76,7 +74,7 @@ def chat_add():
         'created_time': current_time(),
     }
     message = json.dumps(r, ensure_ascii=False)
-    print('debug', message)
+    # print('debug', message)
     # 用 redis 发布消息
     red.publish(chat_channel, message)
     return 'OK'
